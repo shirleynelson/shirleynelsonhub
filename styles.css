@@ -1,0 +1,161 @@
+h2 {
+   color: red;
+   font-family: Arial,sans-serif,cursive;
+   font-size: : 28px;
+   font-weight: bold;
+   text_align: center;
+   background-color: teal;
+   padding: 2px;
+   margin: 2px;
+   border: 5px solid red;
+}
+.table_styleclass {
+  border: 2px solid black;
+}
+.table_th_styleclass {
+  border: 2px solid green;
+  background-color: teal;
+}
+.table_td_styleclass {
+  border: 2px solid teal;
+}
+ #divtopid {
+     font-size: 36px;
+ }
+ #divmiddleid {
+   font-size: 24px;
+ }
+ #divbottomid {
+   font-size: 12px;
+ }
+ #divleftid {
+    font-size: 12px;
+ }
+ #divrightid {
+   font-size:12px;
+ }
+ #first_tableid {
+    background-color:"#6891d4";
+ }
+ #second_tableid {
+    background-color:"#c2a3bd";
+ }
+ #third_tableid {
+  background-color: "#b5c2a3"
+ }
+.name1class {
+  background: teal;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 36px;
+  color: red;
+}
+.name2class {
+  background: green;
+  font-size: 24px;
+}
+.name3class{
+   background: blue;
+   font-size: 12px;
+}
+p {
+  color: green;
+}
+
+.divtopclass {
+  background-color: teal;
+  width: 500px;
+  height: 100px;
+  margin: 30px;
+  padding: 20px;
+  border: 5px solid blue;
+  font-family: Arial,sans-serif,cursive;
+  font-size: : 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.divmiddleclass {
+  background-color: green;
+  width: 50%;
+  height: 400px;
+  margin: 30px;
+  padding: 20px;
+  border: 5px solid blue;
+  font-family: Arial,sans-serif,cursive;
+  font-size: : 24px;
+  font-weight: bold;
+  text_align: center;
+}
+
+.divmiddletopclass {
+  background-color: teal;
+  width: 100%;
+  height: 100px;
+  margin: 30px;
+  padding: 20px;
+  border: 5px solid blue;
+}
+.divmiddlemiddleclass {
+  background-color: teal;
+  width: 50%;
+  height: 100%;
+  margin: 30px;
+  padding: 20px;
+  border: 5px solid blue;
+}
+
+.divmiddleleftclass {
+  background-color: teal;
+  width: 25%;
+  height: 100%;
+  margin: 30px;
+  padding: 20px;
+  border: 5px solid blue;
+}
+.divmiddlerightclass {
+  background-color: teal;
+  width: 25%;
+  height: 100%;
+  margin: 30px;
+  padding: 20px;
+  border: 5px solid blue;
+}
+
+.divrightclass {
+  background-color: teal;
+  width: 100px;
+  height: 400px;
+  margin: 30px;
+  padding: 20px;
+  border: 5px solid blue;
+}
+
+.divleftclass {
+  background-color: teal;
+  width: 100px;
+  height: 400px;
+  margin: 30px;
+  padding: 20px;
+  border: 5px solid blue;
+}
+
+
+.divbottomclass {
+  background-color: green;
+  width: 500px;
+  height: 100px;
+  margin: 30px;
+  padding: 20px;
+  border: 5px solid blue;
+}
+
+div {
+  background-color: teal;
+  width: 500px;
+  height: 400px;
+  margin: 30px;
+  padding: 20px;
+  border: 5px solid blue;
+}
