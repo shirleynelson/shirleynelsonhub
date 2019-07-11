@@ -1,0 +1,55 @@
+<html>
+<head></head>
+<body>
+<style style="text/css">
+.moveit {
+ height: 500px;	
+ overflow: hidden;
+ position: relative;
+}
+.moveit .inner {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateY(50%);
+ -webkit-transform:translateY(50%);	
+ transform:translateY(50%);
+ /* Apply animation to this element */	
+ -moz-animation: moveit 5s linear infinite alternate;
+ -webkit-animation: moveit 5s linear infinite alternate;
+ animation: moveit 5s linear infinite alternate;
+}
+/* Move it (define the animation) */
+@-moz-keyframes moveit {
+ 0%   { -moz-transform: translateY(100%); }
+ 100% { -moz-transform: translateY(0%); }
+}
+@-webkit-keyframes moveit {
+ 0%   { -webkit-transform: translateY(100%); }
+ 100% { -webkit-transform: translateY(0%); }
+}
+@keyframes moveit {
+ 0%   { 
+ -moz-transform: translateY(100%); /* Browser bug fix */
+ -webkit-transform: translateY(100%); /* Browser bug fix */
+ transform: translateY(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateY(0%); /* Browser bug fix */
+ -webkit-transform: translateY(0%); /* Browser bug fix */
+ transform: translateY(0%); 
+ }
+}
+</style>
+
+<div class="moveit">
+<div class="inner">
+<img src="/images/bee.gif" alt="Buzzy bee">
+</div>
+This is the area the bee flies in.
+</div>
+The bee does not fly here.
+</body>
+</html>

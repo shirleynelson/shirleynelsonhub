@@ -1,11 +1,138 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="Refresh" content="0; url=http://star2.abcm.com:880/" />
-  <title>Test1</title>
-</head>
-<body>
-  Hello Hello
-  Here is a new feature.
-</body>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+    <title>Travel Company - Shirley Nelson's Website Template</title>
+    <meta name="keywords" content="travel company, red background, Shirley Nelson, website template, CSS templates, download" />
+    <meta name="description" content="Travel Company Red Color - Shirley Nelson CSS template" />
+    <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+<style style="text/css">
+.moveit {
+
+ overflow: hidden;
+ position: relative;
+}
+.moveitx {
+ height: 100%;
+ overflow: hidden;
+ position: relative;
+}
+.moveit .inner {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateY(50%);
+ -webkit-transform:translateY(50%);	
+ transform:translateY(50%);
+ /* Apply animation to this element */	
+ -moz-animation: moveit 5s linear infinite alternate;
+ -webkit-animation: moveit 5s linear infinite alternate;
+ animation: moveit 5s linear infinite alternate;
+}
+.moveitx .innerx {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(50%);
+ -webkit-transform:translateX(50%);	
+ transform:translateX(50%);
+ /* Apply animation to this element */	
+ -moz-animation: moveitx 5s linear infinite alternate;
+ -webkit-animation: moveitx 5s linear infinite alternate;
+ animation: moveitx 5s linear infinite alternate;
+}
+/* Move it (define the animation) */
+@-moz-keyframes moveit {
+ 0%   { -moz-transform: translateY(100%); }
+ 100% { -moz-transform: translateY(0%); }
+}
+@-moz-keyframes moveitx {
+ 0%   { -moz-transform: translateX(50%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+
+@-webkit-keyframes moveit {
+ 0%   { -webkit-transform: translateY(100%); }
+ 100% { -webkit-transform: translateY(0%); }
+}
+@-webkit-keyframes moveitx {
+ 0%   { -webkit-transform: translateX(50%); }
+ 100% { -webkit-transform: translateX(-50%); }
+}
+@keyframes moveit {
+ 0%   { 
+ -moz-transform: translateY(100%); /* Browser bug fix */
+ -webkit-transform: translateY(100%); /* Browser bug fix */
+ transform: translateY(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateY(0%); /* Browser bug fix */
+ -webkit-transform: translateY(0%); /* Browser bug fix */
+ transform: translateY(0%); 
+ }
+@keyframes moveitx {
+ 0%   { 
+ -moz-transform: translateX(50%); /* Browser bird fix */
+ -webkit-transform: translateX(50%); /* Browser bird fix */
+ transform: translateX(50%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Browser bird fix */
+ -webkit-transform: translateX(-100%); /* Browser bird fix */
+ transform: translateX(-100%); 
+ }
+
+}
+</style>
+<!div class="movitx">
+<!div class="innerx">
+<!img src="/images/birds.gif" alt="Flying Birds">
+<!/div>
+<!/div>
+<div class="moveit">
+<div class="inner">
+<img src="/images/bee.gif" alt="Buzzy bee">
+</div>
+    <div id="templatemo_maincontainer">
+      <div id="templatemo_topsection">
+<marquee><img src="/images/birds.gif" alt="Flying Birds"></marquee>
+
+        <!div id="templatemo_title">
+        <div id="templatemo_slogan">Multiple Platform Integration Web Solutions: MS IIs, SQL SSMS, .NET,asp MVC, Linux PHP, Apache, AWS, MySQL Python, Open Shift, Docker Hub and Git Revision Repository. </div>
+      </div>
+      <div id="templatemo_left_column">
+        <div id="templatemo_menu_top"></div>
+        <div class="templatemo_menu">
+          <ul>
+            <li><a target="contentbody" href="home.html">Home</a></li>
+            <li><span style="color: white;"><a target="contentbody" href="http://star2.abcm.com/~jem/resume/">My Resume</a></span></li>
+            <li><span style="color: white;"><a target="contentbody" href="http://ec2-3-218-139-29.compute-1.amazonaws.com/">LAMP Sample</a></span></li>
+            <li><span style="color: white;"><a target="contentbody" href="home.html">Python Web Sample</a></span></li>
+            <li><span style="color: white;"><a target="contentbody" href="home.html">IIs MVC C# Java</a></span></li>
+            <li><span style="color: white;"><a target="_blank" href="https://github.com/shirleynelson/shirleynelsonhub">Repository</a></span></li>
+            <li><span style="color: white;"><a target="contentbody" href="contact.html">Contact</a></span></li>
+          </ul>
+        </div>
+        <div id="templatemo_contact"> <strong>QUICK CONTACT<br />
+          </strong>
+          Tel: 786-519-4580<br />
+          Fax: 305-386-2818<br />
+          Email: <span style="color: white;"><a href="mailto:star2jem@gmail.com">star2jem@gmail.com</a></span></div>
+      </div>
+      <div id="templatemo_right_column">
+        <iframe border="0" seamless name="contentbody" width="636px" height="800px" src="home.html">
+        </iframe>
+      </div>
+      <div id="templatemo_bot"></div>
+    </div>
+    <div id="templatemo_footer">Copyright © 2019 Shirley Nelson</div>
+
+</div>
+  </body>
 </html>
