@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shirley Nelson's Resume Website!</title>
+       <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+        <link href="/static/style.css" rel="stylesheet" type="text/css" />
+        <script>
+             $( function() {
+             $( "#departure_date" ).datepicker();
+             } );
+             $( function() {
+             $( "#departure_return_date" ).datepicker();
+             } );
+        </script>
+        <style>
+             body {
+                  bgcolor: "#ead7d1";
+             }
+         </style>
+    </head>
+    <body>
+        <style>
+            .horizontally {
+                height: 100%;
+                overflow: hidden;
+                position: relative;
+             }
+             .horizontally .inner {
+                 position: absolute;
+                 width: 100%;
+                 height: 100%;
+                 text-align: center;
+                 /* Starting position */
+                 -moz-transform:translateX(50%);
+                 -webkit-transform:translateX(50%);
+                 transform:translateX(50%);
+                 /* Apply animation to this element */
+                 -moz-animation: horizontally 5s linear infinite;
+                 -webkit-animation: horizontally 5s linear infinite;
+                 animation: horizontally 5s linear infinite;
+             }
+             /* Move it (define the animation) */
+             @-moz-keyframes horizontally {
+                 0%   { -moz-transform: translateX(50%); }
+                 100% { -moz-transform: translateX(-100%); }
+             }
+             @-webkit-keyframes horizontally {
+                 0%   { -webkit-transform: translateX(50%); }
+                 100% { -webkit-transform: translateX(-50%); }
+             }
+             @keyframes horizontally {
+                 0%   {
+                      -moz-transform: translateX(50%); /* Browser bug fix */
+                     -webkit-transform: translateX(50%); /* Browser bug fix */
+                     transform: translateX(50%);
+                 }
+                 100% {
+                     -moz-transform: translateX(-100%); /* Browser bug fix */
+                     -webkit-transform: translateX(-100%); /* Browser bug fix */
+                     transform: translateX(-100%);
+             }
+        }
+        </style>
+        <div class="horizontally">
+            <div class="inner">
+                <img src="/static/birds.gif" alt="Birds">
+            </div>
+            <!div id="templatemo_maincontainer">
+                <!div id="templatemo_right_column">
+                    {% block body %}
+                    {% endblock %}
+                <!/div>
+            <!/div>
+        </div>
+    </body>
+</html>

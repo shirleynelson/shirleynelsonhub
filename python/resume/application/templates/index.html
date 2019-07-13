@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+Multiple Platform Integration Web Solutions: MS IIs, SQL SSMS, .NET,asp MVC, Linux PHP, Apache, AWS, MySQL, WSGI, bootstrap, Flask, Django, Python, Open Shift, Docker Hub and Git Revision Repository. 
+{% endblock %}
+
+{% block body %}
+        <form action="{{ url_for('travels') }}" method="post">
+            <table width="247">
+                <tbody>
+                    <tr>
+                        <td width="64"><input name="radio_flight" value="radio" id="radio_flight" type="radio" />
+                            <strong>Flight</strong>
+                        </td>
+                        <td width="171">
+                            <label> 
+                                <input name="radio_hotel" value="radio" id="radio_hotel" type="radio" />
+                                <strong>Hotel</strong>
+                            </label>
+                         </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input name="radio_car" value="radio" id="radio_car" type="radio" />
+                            <strong>Car</strong>
+                        </td>
+                        <td>
+                            <label> 
+                                <input name="radio_cruise" value="radio" id="radio_cruise" type="radio" />
+                                <strong>Cruise</strong>
+                            </label>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td><strong>From</strong></td>
+                       <td>
+                           <label>                         
+                               <select name="departure_location" id="departure_location">
+                                   <option selected="selected">Miami</option>
+                                   <option>Boca</option>
+                                   <option>Orlando</option>
+                               </select>
+                           </label>
+                      </td>
+                 </tr>
+                 <tr>
+                     <td><strong>To</strong></td>
+                     <td> 
+                         <label>
+                             <select name="departure_destination_location" id="departure_destination_location">
+                                 <option selected="selected">Any</option>
+                                 <option>MIA Miami, FL</option>
+                                 <option>FTL Fort Lauderdale, FL</option>
+                                 <option>ORL Orlando, FL</option>
+                             </select>
+                          </label>
+                     </td>
+                </tr>
+                <tr>
+                    <td><strong>Depart</strong></td>
+                    <td>
+                         <label>
+                             <input name="departure_date" id="departure_date" size="9" value="08/02/2019" type="text" />
+                             <select name="departure_partofday" id="departure_partofday">
+                                 <option selected="selected">Anytime</option>
+                                 <option>Morning</option>
+                                 <option>Afternoon</option>
+                                 <option>Evening</option>
+                             </select>
+                         </label>
+                    </td>
+               </tr>
+               <tr>
+                   <td><strong>Return</strong></td>
+                   <td>
+                       <input name="departure_return_date" id="return" value="08/03/2019" size="9" type="text" />
+                       <select name="departure_return_partofday" id="departure_return_partofday">
+                           <option selected="selected">Anytime</option>
+                           <option>Morning</option>
+                           <option>Afternoon</option>
+                           <option>Evening</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                           <button type="submit" style="border: none; background-color: transparent">
+                            <img src="/static/templatemo_search_button.jpg" />
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+{% endblock %}
