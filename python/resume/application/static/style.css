@@ -73,6 +73,11 @@ h2 {
 	width: 229px;
 	background: url(/static/templatemo_menu_top.jpg) no-repeat;
 }
+#templatemo_right_column_more {
+	float: right;
+	width: 651px;
+	padding-right: 320px;
+}
 #templatemo_right_column {
 	float: right;
 	width: 651px;

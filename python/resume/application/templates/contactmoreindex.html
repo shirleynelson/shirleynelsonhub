@@ -1,0 +1,26 @@
+{% extends "layoutiframemore.html" %}
+
+{% block heading %}
+  <h2 align=top  >About Shirley Nelson------Page 1</h2><br>
+    <a href="{{ url_for('contactmore') }}">[See more]</a>
+                <div class="templatemo_menu">
+                    <ul>
+                        <li><a href="{{ url_for('contactmoreindex') }}"><h2>Page 1</h2></a></li>
+                        <li><a href="{{ url_for('contactmore') }}"><h2>Page 2</h2></a></li>
+                        <li><a href="{{ url_for('contactmore1') }}"><h2>Page 3</h2></a></li>
+                        <li><a href="{{ url_for('contactmore2') }}"><h2>Page 4</h2></a></li>
+                        <li><a href="{{ url_for('contactmore3') }}"><h2>Page 5</h2></a></li>
+                        <li><a href="{{ url_for('contactmore4') }}"><h2>Page 6</h2></a></li>
+                        <li><a href="{{ url_for('contactmore5') }}"><h2>Page 7</h2></a></li>
+                        <li><a href="{{ url_for('contactmore6') }}"><h2>Page 8</h2></a></li>
+                        <li><a href="{{ url_for('contactmore7') }}"><h2>Page 9</h2></a></li>
+                        <li><a href="{{ url_for('contactmore8') }}"><h2>Page 10</h2></a></li>
+                    </ul>
+                </div>
+{% endblock %}
+
+{% block body %}
+        <p>To whom it may concern,<br> I am currently looking for a position at your organization.</p>
+        <p>I can if required manage the business requirements, definition, design, analysis, testing and debugging of the organization's ERP to support core business functions (Human Resources, Payroll, General Financials, Supply Chain, and Accounts Payable). I have experience creating accounting systems from scratch and producing all the financials, invoices, purchase orders, user interfaces, reports including Supply Chain utilization, Accounts Payable discount and rebate reports and customer service satisfaction reports. My experience with Payroll and Human Resources are as a business owner.</p>
+    <a href="{{ url_for('contactmore') }}">See more...</a>
+{% endblock %}
