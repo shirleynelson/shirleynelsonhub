@@ -1,0 +1,110 @@
+{% extends "layoutiframe.html" %} 
+{% block heading %}
+Travel Search
+{% endblock %}
+
+{% block body %}
+<style>
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .container > div {
+                background-color: springgreen;
+                font-size: 20px;
+                margin: 20px;
+                padding: 20px;
+                width: 200px;
+            }
+            .row > div {
+                padding: 10px;
+                background-color: teal;
+                border: 2px solid black;
+            }
+
+            .grid {
+                background-color: green;
+                display: grid;
+                padding: 10px;
+                grid-column-gap: 10px;
+                grid-row-gap: 10px;
+                grid-template-columns: auto auto auto ;
+            }
+
+            .grid-item {
+                background-color: blue;
+                font-size: 15px;
+                padding: 10px;
+                text-align: left;
+            }
+           
+</style>
+<div class="container">
+    <form action="{{ url_for('travels') }}" method="post">
+<div class="grid">
+        <div class="grid-item">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6>
+                    <button type="submit" style="border: none; background-color: transparent">
+                        <img src="/static/templatemo_search_button.jpg" />
+                    </button>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <input name="radio_flight" value="radio" id="radio_flight" type="radio" />
+                        <label for="radio_flight"><strong><font color="white">Flight</font></strong></label>
+                    <input name="radio_hotel" value="radio" id="radio_hotel" type="radio" />
+                        <label for="radio_hotel"><strong><font color="white">Hotel</font></strong></label>
+                    <input name="radio_car" value="radio" id="radio_car" type="radio" />
+                        <label for="radio_car"><strong><font color="white">Car</font></strong></label>
+                    <input name="radio_cruise" value="radio" id="radio_cruise" type="radio" />
+                        <label for="radio_cruise"><strong><font color="white">Cruise</font></strong></label>
+                </div>
+            </div>
+        </div>
+             <div class="grid">
+                 <div class="grid-item">
+                     <label for="departure_location"><strong><font color="white">From</font></strong></label>
+                     <select name="departure_location" id="departure_location">
+                         <option selected="selected">Any</option>
+                         <option>Miami</option>
+                         <option>Boca</option>
+                         <option>Orlando</option>
+                     </select>
+                 </div>
+                 <div class="grid-item">
+                     <label for="departure_destinaton_location"><strong><font color="white">To</font></strong></label>
+                     <select name="departure_destination_location" id="departure_destination_location">
+                         <option selected="selected">Any</option>
+                         <option>Miami</option>
+                         <option>Boca</option>
+                         <option>Orlando</option>
+                     </select>
+                 </div>
+             </div>
+             <div class="grid">
+             <div class="grid-item">
+                    <label for="departure_date"><strong><font color="white">Depart</font></strong></label>
+                    <input name="departure_date" id="departure_date" size="9" value="08/02/2019" type="text" />
+                    <select name="departure_partofday" id="departure_partofday">
+                        <option selected="selected">Anytime</option>
+                        <option>Morning</option>
+                        <option>Afternoon</option>
+                        <option>Evening</option>
+                    </select>
+               </div>
+               <div class="grid-item">
+                    <label for="departure_return_date"><strong><font color="white">Return</font></strong></label>
+                    <input name="departure_return_date" id="return" value="08/03/2019" size="9" type="text" />
+                    <select name="departure_return_partofday" id="departure_return_partofday">
+                        <option selected="selected">Anytime</option>
+                        <option>Morning</option>
+                        <option>Afternoon</option>
+                        <option>Evening</option>
+                    </select>
+                </div>
+         </div>
+    </form>
+</div>
+</div>
+{% endblock %}
