@@ -1,0 +1,16 @@
+
+{% extends "layoutiframe.html" %}
+
+{% block heading %}
+    Travel Search Results Page
+{% endblock %}
+
+{% block body %}
+                     <div>
+                       {% if new_year %}
+                           <h1> Happy New Year! </h1>
+                       {% else %}
+                           <h1>{{ headline }}</h1>
+                       {% endif %}
+                    </div>
+{% endblock %}
