@@ -1,96 +1,99 @@
-{% extends "layout.html" %}
-
-{% block heading %}
+{% extends "layout.html" %} {% block heading %}
 Multiple Platform Integration Web Solutions: MS IIs, SQL SSMS, .NET,asp MVC, Linux PHP, Apache, AWS, MySQL, WSGI, bootstrap, Flask, Django, Python, Open Shift, Docker Hub and Git Revision Repository. 
 {% endblock %}
 
 {% block body %}
-        <form action="{{ url_for('travels') }}" method="post">
-            <table width="247">
-                <tbody>
-                    <tr>
-                        <td width="64"><input name="radio_flight" value="radio" id="radio_flight" type="radio" />
-                            <strong>Flight</strong>
-                        </td>
-                        <td width="171">
-                            <label> 
-                                <input name="radio_hotel" value="radio" id="radio_hotel" type="radio" />
-                                <strong>Hotel</strong>
-                            </label>
-                         </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input name="radio_car" value="radio" id="radio_car" type="radio" />
-                            <strong>Car</strong>
-                        </td>
-                        <td>
-                            <label> 
-                                <input name="radio_cruise" value="radio" id="radio_cruise" type="radio" />
-                                <strong>Cruise</strong>
-                            </label>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td><strong>From</strong></td>
-                       <td>
-                           <label>                         
-                               <select name="departure_location" id="departure_location">
-                                   <option selected="selected">Miami</option>
-                                   <option>Boca</option>
-                                   <option>Orlando</option>
-                               </select>
-                           </label>
-                      </td>
-                 </tr>
-                 <tr>
-                     <td><strong>To</strong></td>
-                     <td> 
-                         <label>
-                             <select name="departure_destination_location" id="departure_destination_location">
-                                 <option selected="selected">Any</option>
-                                 <option>MIA Miami, FL</option>
-                                 <option>FTL Fort Lauderdale, FL</option>
-                                 <option>ORL Orlando, FL</option>
-                             </select>
-                          </label>
-                     </td>
-                </tr>
-                <tr>
-                    <td><strong>Depart</strong></td>
-                    <td>
-                         <label>
-                             <input name="departure_date" id="departure_date" size="9" value="08/02/2019" type="text" />
-                             <select name="departure_partofday" id="departure_partofday">
-                                 <option selected="selected">Anytime</option>
-                                 <option>Morning</option>
-                                 <option>Afternoon</option>
-                                 <option>Evening</option>
-                             </select>
-                         </label>
-                    </td>
-               </tr>
-               <tr>
-                   <td><strong>Return</strong></td>
-                   <td>
-                       <input name="departure_return_date" id="return" value="08/03/2019" size="9" type="text" />
-                       <select name="departure_return_partofday" id="departure_return_partofday">
-                           <option selected="selected">Anytime</option>
-                           <option>Morning</option>
-                           <option>Afternoon</option>
-                           <option>Evening</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                           <button type="submit" style="border: none; background-color: transparent">
-                            <img src="/static/templatemo_search_button.jpg" />
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+<style>
+    .item-a {
+      grid-area: header;
+    }
+    .item-b {
+      grid-area: main;
+    }
+    .item-c {
+      grid-area: sidebar;
+    }
+    .item-d {
+      grid-area: footer;
+    }
+    .container {
+        display: flex;
+        flex-wrap:wrap;
+        grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+        grid-template-rows: [row1-start] 25% [row1-end row2-start] 25% [row2-end];
+        grid-template-areas: 
+            "header header header header header"
+            " . main main . sidebar"
+            "footer footer footer footer footer";
+        justify-items: start | end | center | stretch | end ;
+        justify-content: space-evenly;
+
+    }
+    .grid {
+        display: grid;
+        padding: 20px;
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
+    }
+    .grid-item {
+       font-size: 20px;
+    }
+</style>
+<div class=container>
+            <div class="item-a">item-a</div>
+            <div class="item-b">item-b</div>
+            <div class="item-c">item-c</div>
+            <div class="item-d">item-d</div>
+    <form action="{{ url_for('travels') }}" method="post">
+
+            <div class="item-b">
+                <input name="radio_flight" value="radio" id="radio_flight" type="radio" />
+                <strong>Flight</strong>
+                <input name="radio_hotel" value="radio" id="radio_hotel" type="radio" />
+                <strong>Hotel</strong>
+                <input name="radio_car" value="radio" id="radio_car" type="radio" />
+                <strong>Car</strong>
+                <input name="radio_cruise" value="radio" id="radio_cruise" type="radio" />
+                <strong>Cruise</strong>
+             </div>
+             <div class="item-b">
+                <strong>From</strong>>
+                <select name="departure_location" id="departure_location">
+                    <option selected="selected">Miami</option>
+                    <option>Boca</option>
+                    <option>Orlando</option>
+                    </select>
+                    <strong>To</strong>
+                    <select name="departure_destination_location" id="departure_destination_location">
+                         <option selected="selected">Any</option>
+                         <option>MIA Miami, FL</option>
+                         <option>FTL Fort Lauderdale, FL</option>
+                         <option>ORL Orlando, FL</option>
+                    </select>
+               </div>
+               <div class="item-b">
+                    <strong>Depart</strong>
+                    <input name="departure_date" id="departure_date" size="9" value="08/02/2019" type="text" />
+                    <select name="departure_partofday" id="departure_partofday">
+                        <option selected="selected">Anytime</option>
+                        <option>Morning</option>
+                        <option>Afternoon</option>
+                        <option>Evening</option>
+                    </select>
+               </div>
+               <div class="item-b">
+                    <strong>Return</strong>
+                    <input name="departure_return_date" id="return" value="08/03/2019" size="9" type="text" />
+                    <select name="departure_return_partofday" id="departure_return_partofday">
+                        <option selected="selected">Anytime</option>
+                        <option>Morning</option>
+                        <option>Afternoon</option>
+                        <option>Evening</option>
+                    </select>
+                    <button type="submit" style="border: none; background-color: transparent">
+                       <img src="/static/templatemo_search_button.jpg" />
+                    </button>
+                 </div>
     </form>
+</div>
 {% endblock %}
