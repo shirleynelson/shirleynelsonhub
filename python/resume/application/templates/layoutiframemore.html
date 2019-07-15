@@ -2,7 +2,8 @@
 <html>
     <head>
         <title>Shirley Nelson's Resume Website!</title>
-       <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
         <link href="/static/style.css" rel="stylesheet" type="text/css" />
         <script>
              $( function() {
@@ -13,6 +14,20 @@
              } );
         </script>
         <style>
+             @media (min-width: 500px) {
+                  h1::before {
+                      content: "<h1>Welcome to My Web Page!</h1>";
+                  }
+             }
+             @media (max-width: 499px) {
+                 h1::before {
+                     content: "<h2>Welcome!</h2>";
+                 }
+             }
+             @media print {
+                 .screen-only {
+                 }
+             }
              body {
                   bgcolor: "#ead7d1";
              }
@@ -65,7 +80,7 @@
             <div class="inner">
                 <!img src="/static/circlingswallow.gif" alt="Birds">
             </div>
-                <marquee><img src="/static/circlingswallow.gif" alt="Birds"></marquee>
+                <marquee><img class="screen-only" src="/static/circlingswallow.gif" alt="Birds"></marquee>
             <div id="templatemo_maincontainer">
                 <table><tr><td border=1>
                 {% block heading %}{% endblock %}
