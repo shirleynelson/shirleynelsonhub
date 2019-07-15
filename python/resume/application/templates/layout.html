@@ -2,6 +2,7 @@
 <html>
     <head>
        <title>Shirley Nelson's Resume Website!</title>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
         <link href="/static/style.css" rel="stylesheet" type="text/css" />
         <script>
@@ -16,6 +17,29 @@
              body {
                   bgcolor: "#ead7d1";
              }
+             @media print {
+                 .screen-only {
+                     display: none;
+                 }
+             }
+             @media (max-width:499px){
+                  h1::before {
+                       content: "<h2>Welcome!</h2>";
+                  }
+                  body {
+                      width: 1000px;
+                  }
+      
+             }
+             @media (min-width: 500px) {
+                  h1::before {
+                       content: "<h1>Welcome to My Web Page!</h1>";
+                  }
+                  body {
+                       width: 100%;
+                  }
+             }
+                   
          </style>
     </head>
     <body>
@@ -28,7 +52,7 @@
              .horizontally .inner {
                  position: absolute;
                  width: 100%;
-                 height: 100%;
+                 height: 234px;
                  text-align: center;
                  /* Starting position */
                  -moz-transform:translateX(50%);
@@ -63,7 +87,7 @@
         </style>
             <div class="horizontally">
                 <div class="inner">
-                    <img src="/static/birds.gif" alt="Birds">
+                    <img class="screen-only" src="/static/birds.gif" alt="Birds">
                 </div>
         <div id="templatemo_maincontainer">
                     <div id="templatemo_topsection">
@@ -72,17 +96,22 @@
                            {% block heading %}{% endblock %}
                         </div>
                     </div><!endoftopsection>
+        <!/div>
         <div id="templatemo_left_column">
             <div id="templatemo_menu_top"></div>
                 <div class="templatemo_menu">
                     <ul>
-                        <li><a target="contentbody" href="http://127.0.0.1:5000/home">Home</a></li>
+                        <li><a target="contentbody" href="http://127.0.0.1:5000/home">Travel Search V1</a></li>
+                        <li><a target="contentbody" href="http://127.0.0.1:5000/homev2">Travel Search V2</a></li>
+                        <li><span style="color: white;"><a target="_blank" href="http://127.0.0.1:5000/variablescss">SASS/variables.scss</a></span></li>
                         <li><span style="color: white;"><a target="contentbody" href="http://star2.abcm.com/~jem/resume/">My Resume</a></span></li>
                         <li><span style="color: white;"><a target="contentbody" href="http://ec2-3-218-139-29.compute-1.amazonaws.com/">LAMP AWS Sample</a></span></li>
                         <li><span style="color: white;"><a target="contentbody" href="http://127.0.0.1:5000/python">Python Flask Web</a></span></li>
                         <li><span style="color: white;"><a target="contentbody" href="http://star2.abcm.com:880/">IIs MVC C# Java</a></span></li>
-                        <li><span style="color: white;"><a target="_blank" href="https://github.com/shirleynelson/shirleynelsonhub">Repository</a></span></li>
-                        <li><span style="color: white;"><a target="contentbody" href="http://127.0.0.1:5000/contact">Contact</a></span></li>
+                        <li><span style="color: white;"><a target="_blank" href="https://github.com/check50/shirleynelson">Repository</a></span></li>
+                        <li><span style="color: white;"><a target="contentbody" href="http://127.0.0.1:5000/blog">Contact Notes</a></span></li>
+                        <li><span style="color: white;"><a target="contentbody" href="http://127.0.0.1:5000/privateblog">Private Notes</a></span></li>
+                        <li><span style="color: white;"><a target="contentbody" href="http://127.0.0.1:5000/contactmoreindex">About</a></span></li>
                     </ul>
                 </div>
                 <div id="templatemo_contact"> <strong>QUICK CONTACT<br />
@@ -94,15 +123,13 @@
                 </div>
         </div>
                 <div id="templatemo_right_column">
-        <iframe border="0" src="home" seamless name="contentbody" width="600" height="800px">
-                    {% block body %}
-                    {% endblock %}
+        <iframe border="0" src="home" seamless name="contentbody" width="95%" height="800">
         </iframe>
                 </div>
                 <div id="templatemo_bot"></div>
             </div>
             <!/div>
-            <div id="templatemo_footer">Copyright © 2019 Shirley Nelson</div>
+		    <div id="templatemo_footer">Copyright © 2019 Shirley Nelson</div>
         </div>
     </body>
 </html>
