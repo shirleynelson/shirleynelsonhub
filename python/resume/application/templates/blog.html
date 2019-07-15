@@ -1,0 +1,22 @@
+{% extends "layoutiframe.html" %}
+
+{% block heading %}
+    Blog Notes
+<div class="container">
+    <div class="alert alert-primary" role="alert">
+         Enter your messages, questions, feedback here with a note.
+    </div>
+</div>
+{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for noteglobal in notesglobal %}
+            <li>{{ noteglobal }}</li>
+        {% endfor %}
+    </ul> 
+    <form action="{{ url_for('blog')}}" method="post">
+        <input type="text" name="noteglobal" placeholder="Enter Blog Note Here">
+        <button>Add Note</button>
+    </form>
+{% endblock %}
