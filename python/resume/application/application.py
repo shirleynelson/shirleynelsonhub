@@ -11,6 +11,10 @@ Session(app)
 notesglobal = []
 toptitle="Shirley Nelson Resume"
 
+@app.route("/variablescss")
+def variablescss():
+    return render_template("variablescss.html")
+
 @app.route("/contactmoreindex")
 def contactmoreindex():
     return render_template("contactmoreindex.html")
@@ -68,6 +72,10 @@ def index():
 @app.route("/home")
 def home():
     return render_template("home.html")
+
+@app.route("/homev2")
+def homev2():
+    return render_template("homev2.html")
 
 @app.route("/python")
 def python():
