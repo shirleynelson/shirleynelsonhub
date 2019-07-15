@@ -1,0 +1,81 @@
+$color: red;
+$color1: yellow;
+$color2: blue;
+$color3: black;
+$color4: white;
+$color5: brown;
+$color6: green;
+$color7: red;
+$color8: teal;
+$size1: 18px;
+$size2: 18px;
+$size3: 14px;
+%message {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+.success {
+    @extend %message;
+    background-color: green;
+}
+.warning {
+    @extend %message;
+    background-color: orange;
+}
+.error {
+    @extend %message;
+    background-color: red;
+}
+div {
+    font-size:$size1;
+    p {
+        color: $color8;
+    }
+    ul {
+        color: $color6;
+    }
+}
+a:link {
+    color: $color5;
+}
+a:visited {
+    color: $color6;
+}
+a:hover {
+    color: $color7;
+} 
+ul{
+    font-size: $size3;
+    color: $color;
+}
+ 
+ol {
+    font-size: $size2;
+    color: $color;
+}
+p::selection {
+    color: red;
+    background-color: $color1;
+}
+a::before {
+    content: "\21d2 ";
+    front-weight:bold;
+}
+ol li {
+    color: $color;
+}
+ol > li {
+    color: $color2;
+}
+h1 { 
+    color: $color4;
+}
+h2, h3 {
+    color: $color2;
+}
+p { color: $color3;
+    font-size: 14px}
